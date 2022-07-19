@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  text-decoration: none;
+}
+
+.header {
+  color: black;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 25px;
+  color: black;
+}
+
+.products-section {
+  display: flex; /* objekt står bredvid varandra */
+  flex-wrap: wrap; /*om t.ex. skärmen minskas så kommer objekt flyttas ner*/
+  justify-content: center;
+  text-align: center;
+}
+
+.product {
+  padding: 3rem;
+  margin: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 250px;
+  max-height: 450px;
+  align-items: center;
+  text-align: center;
+  display: flexbox;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 250px;
+  height: 270px;
+  object-fit: contain;
+}
+
+.cart {
+  display: flexbox; /* objekt står bredvid varandra */
+  flex-wrap: wrap; /*om t.ex. skärmen minskas så kommer objekt flyttas ner*/
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 3rem;
+}
+
+.total-price {
+  font-size: 22px;
+}
+
+.quant-btn button {
+  border: none;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.quant-btn button:hover {
+  color: rgb(255, 255, 255);
+  background-color: blue;
+}
+
+.confirm-order-btn button {
+  border: none;
+  height: 50px;
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirm-order-btn button:hover {
+  color: rgb(255, 255, 255);
+  background-color: blue;
+}
+
+.cart-icon {
+  transform: scale(150%);
+  color: black;
+}
+
+.item-amount-cart {
+  height: 26px;
+  width: 26px;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.products-title {
+  text-align: center;
+  align-items: center;
+}
+
+.add-to-cart button {
+  border: none;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-to-cart button:hover {
+  color: white;
+  background-color: blue;
+}
