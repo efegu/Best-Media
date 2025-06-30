@@ -162,3 +162,10 @@ html {
   background-color: blue;
 }
 
+@media (max-width: 585px) {
+  .logo,
+  .navbar-cart {
+    display: none;
+  }
+}
+
