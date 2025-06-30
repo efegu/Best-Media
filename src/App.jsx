@@ -7,6 +7,8 @@ import { useState } from 'react';
 function App() {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(''); // <-- Add this
+
   const addItem = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
@@ -31,16 +33,26 @@ function App() {
       );
     }
   };
+
+  // Filter products based on searchTerm
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="App">
-      <Navbar countCartItems={cartItems.length}></Navbar>
+      <Navbar
+        countCartItems={cartItems.length}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+      />
       <div>
-        <Home addItem={addItem} products={products}></Home>
+        <Home addItem={addItem} products={filteredProducts} />
         <Cart
           addItem={addItem}
           removeItem={removeItem}
           cartItems={cartItems}
-        ></Cart>
+        />
       </div>
     </div>
   );

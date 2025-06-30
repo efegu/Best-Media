@@ -1,14 +1,26 @@
 import React from 'react';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-export default function Navbar(props) {
-  const { countCartItems } = props;
+
+const Navbar = ({ countCartItems, searchTerm, setSearchTerm }) => {
   return (
-    <header className="header">
-      <div>
+    <nav className="navbar">
+      {/* Left side (logo or brand) */}
+       <div>
         <h1 className="logo">Best Media</h1>
       </div>
-      <div>
+      {/* Center (search bar) */}
+      <div className="navbar-search">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+      {/* Right side (cart) */}
+      <div className="navbar-cart">
+          <div>
         <a href="#cart-section">
           <ShoppingCartOutlinedIcon className="cart-icon" />
           {countCartItems ? (
@@ -18,6 +30,11 @@ export default function Navbar(props) {
           )}
         </a>{' '}
       </div>
-    </header>
+</div>
+
+
+    </nav>
   );
-}
+};
+
+export default Navbar;

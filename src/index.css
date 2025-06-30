@@ -10,6 +10,18 @@ html {
   text-decoration: none;
 }
 
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .header {
   color: black;
   padding: 2rem;
@@ -23,6 +35,21 @@ html {
 .logo {
   font-size: 25px;
   color: black;
+  justify-self: start;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-search input {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .products-section {
@@ -55,6 +82,10 @@ html {
   object-fit: contain;
 }
 
+.navbar-cart {
+  justify-self: end;
+}
+
 .cart {
   display: flexbox; /* objekt står bredvid varandra */
   flex-wrap: wrap; /*om t.ex. skärmen minskas så kommer objekt flyttas ner*/
@@ -62,6 +93,7 @@ html {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 3rem;
+
 }
 
 .total-price {
@@ -129,3 +161,4 @@ html {
   color: white;
   background-color: blue;
 }
+
