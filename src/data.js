@@ -22,7 +22,7 @@ const data = {
       id: '4',
       name: 'Iphone 16',
       price: 1360,
-      image: '/images/iphone_16.jpg',
+      image: '/images/iphone_16.JPG',
     },
     {
       id: '5',
